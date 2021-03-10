@@ -2,16 +2,12 @@ const dedent = require('dedent')
 const WebSocket = require('ws')
 const Broadcaster = require('telegraf-broadcast')
 
-const formatDate = (timestamp) => {
-    const date = new Date(timestamp)
-
-    return [date.getHours(), date.getMinutes(), date.getSeconds()].join(':')
-}
-
 class PumpDetector {
     constructor(telegram) {
         this.channels = ['@whales_watch']
-        this.broadcaster = new Broadcaster(telegram)
+        this.broadcaster = new Broadcaster(telegram, {
+            queueName: 'whales'
+        })
 
         this.run()
     }

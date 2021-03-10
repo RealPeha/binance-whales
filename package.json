@@ -12,7 +12,7 @@
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.7",
     "telegraf": "^3.38.0",
-    "telegraf-broadcast": "^2.4.0",
+    "telegraf-broadcast": "^2.4.5",
     "ws": "^7.4.3"
   }
 }
